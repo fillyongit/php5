@@ -36,5 +36,5 @@ echo "=========== COMMENTO FINALE ============\n\r";
 echo 'Sembra che l\'unico carattere mal interpretato dal browser quando si manda la pagina in iso-8859-1 sia quello rappresentato 
 in esadecimale con 2 bytes.
 E\' importantissimo l\'encoding del file. Infatti questo file è codificato in utf8 ed è questo che conta
-per l\'interprete php che usa questa informazione per interpretate correttamente le stringhe e le funzioni che operano sulle stringhe. 
+per l\'interprete php che usa questa informazione per interpretare correttamente le stringhe e le funzioni che operano sulle stringhe. 
 L\'altro lavoro lo fa appunto il browser che si vede arrivare una determinata codifica nell\'http.';
