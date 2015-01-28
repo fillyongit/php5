@@ -1,5 +1,8 @@
 <?php 
 namespace com\alessio\Test;
+
+echo '<h1> PHP VERSION: ' . phpversion() . '</h1>';
+
 include 'class.php';
 
 print __NAMESPACE__ . "<br>";
@@ -8,23 +11,22 @@ foo::staticmethod();
 print "<hr>";
 print "<h1>REFERENCES</h1>";
 print "<hr>";
-$GLOBALS["baz"] = "cippo";
 
-function foo2(&$var)
-{
-    $var =& $GLOBALS["baz"];
-    // $var a questo punto è un'alias di $GLOBALS["baz"] e non è che fa puntare $bar a $GLOBALS["baz"],
-    // per questo la reference non è un puntatore.
-    $var = "42";
-}
-$bar = "ciao";
-foo2($bar); 
-print $bar;
-print "<hr>";
-print $GLOBALS["baz"];
-
-print "<hr>";
 print "<h3>Object passed by reference or by value?</h3>";
+print "<hr>";
+
+class A {
+	public $foo = 1;
+}
+
+function foo2($obj)
+{
+	$obj->foo = 2;
+}
+
+$e = new A();
+foo2($e);
+print $e->foo;
 print "<hr>";
 
 class Holder {
