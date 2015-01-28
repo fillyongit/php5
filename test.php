@@ -40,9 +40,10 @@ class Holder {
         return $this->value;
     }
 }
-// Nonostante diceno che gli oggetti vengono assegnati, passati, restituiti
-// in questo caso è necessario prefissare gli argomenti con & per vedere
-// trattati gli oggetti per riferimento.
+// Gli oggetti non sono passati, assegnati restituiti per riferimento.
+// Quello che viene passato/assegnato/restituito è una COPIA dell'identificatore dell'oggetto.
+// Per passare per riferimento continuare ad usare l'&. In queso caso non viene passata la copia
+// dell'identificatore ma il riferimento/alias all'identificare.
 function swap(&$x, &$y) {
     $tmp = $x;
     $x = $y;
