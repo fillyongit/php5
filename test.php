@@ -73,6 +73,9 @@ print true + 1;
 print "<br>";
 print "print false + 1: ";
 print false + 1;
+print "<br>";
+print "print null . 'dfs': ";
+var_dump(null . 'dfs');
 
 print '<hr>';
 $a = 0;
@@ -126,4 +129,25 @@ while($i<5){
 }
 print "fuori il while block: ";
 var_dump($c);
-?>
+
+print "<h1>ALTRO</h1>";
+$a = 1;
+++$a;
+$a *= $a;
+echo $a--;
+
+print '<hr />';
+$a = array(1,2,3);
+$b = array(1,2,3);
+$c = array_unique(array_merge($a, $b));
+print_r($c);
+
+print '<hr>';
+$a = array();
+$a[0] = 1;
+$a[14] = 3;
+$a[4] = 2;
+
+ksort($a);
+$a = array_slice($a, 0);
+var_dump($a);
