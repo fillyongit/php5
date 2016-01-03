@@ -81,6 +81,10 @@ $a =+ $b;
 print $a;
 
 print '<hr>';
+print "<h1>EXPLICIT TYPE CASTING</h1>";
+$z = (int) '080000';
+print $z;
+print '<hr>';
 $a = '1565';
 $b = '1565-2';
 var_dump(strcmp($a,$b));
@@ -126,4 +130,23 @@ while($i<5){
 }
 print "fuori il while block: ";
 var_dump($c);
+
+print '<hr>';
+$a = array(
+	'1' => array(1,2),
+	'2' => array(1,2,3,4),
+	'3' => array(1,2,3,4,5)
+);
+
+usort($a, function($a,$b) {
+	if (count($a) == count($b))
+		return 0;
+	return count($a) < count($b) ? 1 : -1;
+});
+
+print_r($a);
+
+$b = reset($a);
+
+print_r($b);
 ?>
