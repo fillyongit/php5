@@ -132,9 +132,9 @@ var_dump($c);
 
 print "<h1>ALTRO</h1>";
 $a = 1;
-++$a;
-$a *= $a;
-echo $a--;
+	++$a;
+	$a *= $a;
+	echo $a--;
 
 print '<hr />';
 $a = array(1,2,3);
