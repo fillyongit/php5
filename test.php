@@ -56,6 +56,14 @@ swap($a, $b);
 
 echo $a->getValue() . ", " . $b->getValue() . "\n";
 
+$a = array(1);
+function add($b, &$ar) {
+    $ar[] = 2;
+}
+add('', $a);
+print '<hr>';
+print_r($a);
+
 print "<hr>";
 print "<h1>IMPLICIT TYPE CASTING</h1>";
 print "<hr>";
