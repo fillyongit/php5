@@ -180,3 +180,8 @@ usort($a, function($a,$b) {
 print_r($a);
 $b = reset($a);
 print_r($b);
+
+print '<hr>';
+$a = array('3a' => 'A',  '1' => 'B', 'C', '2' => 'D');
+print_r($a);
+print count($a);
