@@ -9,3 +9,5 @@ $c = new MyClass();
 $c->run();
 $c->readFile();
 $c->triggerError();
+
+print $a; //Notice.
