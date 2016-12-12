@@ -35,3 +35,7 @@ espresso in iso-8859-1 in esadecimale.
 E' importantissimo l'encoding del file. Infatti questo file è codificato in utf8 ed è questo che conta
 per l'interprete php che usa questa informazione per interpretare correttamente le stringhe e le funzioni che operano sulle stringhe. 
 L'altro lavoro lo fa appunto il browser che si vede arrivare una determinata codifica nell'http.";
+
+echo "\n\r\n\r";
+//htmlentities('provà', ENT_XML1, "UTF-8");
+var_dump(get_html_translation_table(HTML_ENTITIES, ENT_QUOTES | ENT_XML1));
