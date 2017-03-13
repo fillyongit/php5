@@ -192,3 +192,7 @@ print count($a);
 
 print '<hr>';
 echo date('d/m/Y', strtotime('+2 weekdays'));
+
+print '<hr>';
+$rand = 'rprtrprtrprtrprt'; // 16 caratteri
+print bin2hex($rand); // genera una stringa di 32 caratteri a partire da una di 16.
